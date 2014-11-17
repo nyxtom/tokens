@@ -38,6 +38,11 @@ func main() {
 + EmoticonWordPunctuationRegexp
 + WordPunctuationRegexp
 
+Word punctuation contains many patterns including detecting partial urls,
+file paths, money, numerics, decimals, words with hyphens, abbreviations,
+numeric / words (3D), phone numbers, repeated punctuations, and
+non-whitespace.
+
 # LICENSE
 
 MIT
