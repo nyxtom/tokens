@@ -9,13 +9,13 @@ View the [docs](http://godoc.org/github.com/nyxtom/tokens).
 ## Installation
 
 ```
-$ go get github.com/salientio/tokens
+$ go get github.com/nyxtom/tokens
 ```
 
 ## Example
 
 ```go
-import "github.com/salientio/tokens"
+import "github.com/nyxtom/tokens"
 
 func main() {
 	fmt.Println(tokens.SplitNatural("hello world, this is @nyxtom!"))
