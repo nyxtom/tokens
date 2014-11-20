@@ -4,7 +4,7 @@ Tokens is a simple nlp utility (written in go) for tokenizing strings
 using common split regular expressions for whitespace, words, emoticons,
 urls and more.
 
-View the [docs](http://godoc.org/github.com/salientio/tokens).
+View the [docs](http://godoc.org/github.com/nyxtom/tokens).
 
 ## Installation
 
