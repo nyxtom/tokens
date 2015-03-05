@@ -4,16 +4,24 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
-
-	"github.com/salientio/cortex/utils"
-
 	"testing"
+    "runtime"
 )
+
+func nameOf(f interface{}) string {
+    v := reflect.ValueOf(f)
+    if v.Kind() == reflect.Func {
+        if rf := runtime.FuncForPC(v.Pointer()); rf != nil {
+            return rf.Name()
+        }
+    }
+    return v.String()
+}
 
 // AssertTokenizeFunc will use the given input string, tokenize function and expected output to test
 func AssertTokenizeFunc(t *testing.T, input string, f func(string) []string, expected []string) {
 	results := f(input)
-	name := utils.NameOf(f)
+	name := nameOf(f)
 	if !reflect.DeepEqual(results, expected) {
 		t.Errorf("%s(\"%s\") \nresulted in:\n%s, \nexpected:\n%s",
 			name, input,
